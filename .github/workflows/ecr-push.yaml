@@ -41,6 +41,7 @@ jobs:
           tags: |
             ${{ env.IMAGE_TAG }}:${{ github.sha }}
             ${{ env.IMAGE_TAG }}:latest
+          build-args: --provenance=false # ✅ Disable provenance
 
       - name: Output Pushed Image URIs
         run: |
